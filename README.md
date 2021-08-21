@@ -1,2 +1,2 @@
 # java-practices-worspace
-Projects created to practice some java environment concepts.
+Workspace created to save some practice small projects of java environment concepts.
