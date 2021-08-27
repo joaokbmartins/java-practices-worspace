@@ -31,6 +31,11 @@ public class App {
     System.out.println("Total  : " + total);
 
     float var = 5.43F;
+
+    final double IB_TO_KG = 0.45359237d;
+    double pounds = 200d;
+    double kilograms = pounds * IB_TO_KG;
+    System.out.println(pounds + " pounds = " + kilograms + " kilograms");
   }
 
 }
