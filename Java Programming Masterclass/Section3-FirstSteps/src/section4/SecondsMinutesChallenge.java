@@ -1,8 +1,5 @@
 package section4;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class SecondsMinutesChallenge {
 
   public static void main(String[] args) {
@@ -13,28 +10,24 @@ public class SecondsMinutesChallenge {
     if (minutes < 0 || seconds < 0 || seconds > 59) {
       return "Invalid Value";
     }
+    seconds += (minutes / 60);
 
-    double totSec = 2d;
-//    totSec = 8274d;
+    int hour = 0, minute = 0, second = 0;
 
-    System.out.println(">>> " + (1f / 3600f));
+    seconds = 8274;
 
-    System.out.println(BigDecimal.valueOf(Double.parseDouble(k(double) (1d / 3600d))).setScale(2, RoundingMode.HALF_UP).doubleValue());
+    float h = seconds / 3600f;
+    hour = (int) seconds / 3600;
+    System.out.println(h);
+    System.out.println(Math.round((Integer.valueOf((Float.valueOf(h - hour).toString().replace(".", ""))))));
+    System.out.println((h - hour) * 100);
 
-//    double secToHour = (totSec / 3600d);
-//    System.out.println(secToHour);
-//
-//    int hour = (int) secToHour;
-//    System.out.println(hour);
-//
-//    double secToMin = (secToHour - hour) * 60d;
-//    System.out.println(secToMin);
-//
-//    int minute = (int) secToMin;
-//    System.out.println(minute);
-//
-//    double remainingSec = ((secToMin) - minute);
-//    System.out.println(remainingSec);
+    minute = (int) ((seconds / 3600) - hour);
+
+    String res = (hour < 9 ? "0" + hour : hour) + "h ";
+    res += (minute < 9 ? "0" + minute : minute) + "m ";
+    res += (second < 9 ? "0" + Math.round(second) : second) + "s ";
+    System.out.println(res);
 
     return null;
   }
