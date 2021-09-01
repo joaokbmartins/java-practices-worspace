@@ -3,32 +3,31 @@ package section4;
 public class SecondsMinutesChallenge {
 
   public static void main(String[] args) {
-    getDurationString(0, 1);
+    System.out.println(secToMin(8274L));
+    System.out.println(getDurationString(90L, 1L));
   }
 
   public static String getDurationString(long minutes, long seconds) {
     if (minutes < 0 || seconds < 0 || seconds > 59) {
       return "Invalid Value";
     }
-    seconds += (minutes / 60);
-
-    int hour = 0, minute = 0, second = 0;
-
-    seconds = 8274;
-
-    float h = seconds / 3600f;
-    hour = (int) seconds / 3600;
-    System.out.println(h);
-    System.out.println(Math.round((Integer.valueOf((Float.valueOf(h - hour).toString().replace(".", ""))))));
-    System.out.println((h - hour) * 100);
-
-    minute = (int) ((seconds / 3600) - hour);
-
+    long hour = 0, minute = 0;
+    hour = minutes / 60;
+    minute = minutes % 60;
     String res = (hour < 9 ? "0" + hour : hour) + "h ";
     res += (minute < 9 ? "0" + minute : minute) + "m ";
-    res += (second < 9 ? "0" + Math.round(second) : second) + "s ";
+    res += (seconds < 9 ? "0" + seconds : seconds) + "s ";
     System.out.println(res);
+    return null;
+  }
 
+  public static String secToMin(long seconds) {
+    if (seconds < 0) {
+      return "Invalid value";
+    }
+    long minutes = seconds / 60;
+    seconds = seconds % 60;
+    SecondsMinutesChallenge.getDurationString(minutes, seconds);
     return null;
   }
 
