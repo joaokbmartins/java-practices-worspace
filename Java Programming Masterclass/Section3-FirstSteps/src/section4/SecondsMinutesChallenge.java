@@ -3,8 +3,8 @@ package section4;
 public class SecondsMinutesChallenge {
 
   public static void main(String[] args) {
-    System.out.println(secToMin(8274L));
-    System.out.println(getDurationString(90L, 1L));
+    System.out.println(secToMin(3945L));
+    System.out.println(getDurationString(65,45));
   }
 
   public static String getDurationString(long minutes, long seconds) {
