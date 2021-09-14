@@ -9,26 +9,31 @@ public class ForStatement {
 //      i--;
 //    }
 
-    int amount = 10000;
-    for (int i = 2; i <= 8; i++) {
-      printResult(amount, i);
+//    int amount = 10000;
+//    for (int i = 2; i <= 8; i++) {
+//      printResult(amount, i);
+//    }
+//    System.out.println("----");
+//    for (int i = 8; i >= 2; i--) {
+//      printResult(amount, i);
+//    }
+//    System.out.println("-----");
+//    int total = 100;
+//    int primeCounter = 0;
+//    final int LIMIT = 10;
+//    for (int i = 0; i <= total; i++) {
+//      if (isPrime(i)) {
+//        System.out.println(i + " is prime.");
+//        primeCounter++;
+//        if (primeCounter == LIMIT) {
+//          break;
+//        }
+//      }
+//    }
+    if (isPrime(c)) {
+      System.out.println(c + " prime");
     }
-    System.out.println("----");
-    for (int i = 8; i >= 2; i--) {
-      printResult(amount, i);
-    }
-    System.out.println("-----");
-    int total = 100;
-    int primeCounter = 0;
-    final int LIMIT = 10;
-    for (int i = 0; i <= total; i++) {
-      if (isPrime(i)) {
-        System.out.println(i + " is prime.");
-        primeCounter++;
-        if (primeCounter == LIMIT) {
-          break;
-        }
-      }
+    for (int c = 0; c <= 100; c++) {
     }
   }
 
@@ -36,9 +41,13 @@ public class ForStatement {
     if (number <= 1) {
       return false;
     }
-    for (int i = 2; i <= Math.sqrt(number); i++) {
-      if (number % i == 0) {
-        return false;
+//  3
+    number = 100;
+    for (int c = 0; c <= number; c++) {
+      for (int i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i == 0) {
+          return false;
+        }
       }
     }
     return true;

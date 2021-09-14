@@ -1,0 +1,14 @@
+{
+  "name": "node-app-docker",
+  "version": "1.0.0",
+  "description": "Node Web App With Docker",
+	"author": "Joao Martins",
+	"license": "MIT",
+  "main": "server.js",
+  "scripts": {
+		"start": "node server.js"
+  },
+	"dependencies":{
+		"express":"^4.16.1"
+	}
+}
