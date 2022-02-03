@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  drupal:
+    image: drupal:8-apache
+    container_name: drupal
+    ports:
+      - 8080:80
+    volumes:
+      - modules:/var/www/html/modules
+      - profiles:/var/www/html/profiles
+      - sites:/var/www/html/sites
+      - themes:/var/www/html/themes
+  postgres:
+    image: postgres:latest
+    container_name: postgres-sql 
+    environment: 
+      POSTGRES_PASSWORD: root
+    volumes: 
+      - ./db-data:/var/lib/postgresql/data:rw
+
+volumes:
+  modules:
+    external: false
+  profiles: 
+    external: false
+  sites: 
+    external: false
+  themes: 
+    external: false
